@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_100822) do
+ActiveRecord::Schema.define(version: 2018_09_27_110218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "photos", force: :cascade do |t|
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text "content"
+    t.integer "photo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_posts_on_photo_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "owner_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "title"
+    t.text "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_reservations_on_owner_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
+    t.integer "owner_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_topics_on_owner_id"
+    t.index ["post_id"], name: "index_topics_on_post_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +58,17 @@ ActiveRecord::Schema.define(version: 2018_09_27_100822) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "parent"
+    t.string "name"
+    t.string "admin", default: "f"
+    t.string "telephone"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "posts", "photos"
+  add_foreign_key "reservations", "users", column: "owner_id"
+  add_foreign_key "topics", "posts"
+  add_foreign_key "topics", "users", column: "owner_id"
 end
