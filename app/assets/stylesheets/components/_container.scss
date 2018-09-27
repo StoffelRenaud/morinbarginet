@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 70px);
+  height: 100vh;
   background-size: cover !important;
   a {
     color: white;
@@ -29,4 +29,19 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
+}
+
+//Reservation index ------------------------------------------------------------
+.aucune-reservation-container {
+  display: flex;
+  i {
+    margin-left: 10px;
+    transition: 0.5s;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    &:hover {
+      color: $orange;
+      transition: 0.5s;
+    }
+  }
 }

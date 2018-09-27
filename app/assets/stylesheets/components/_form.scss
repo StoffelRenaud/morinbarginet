@@ -62,3 +62,28 @@
   box-shadow: none;
   border-top: 1px solid $blue;
 }
+
+//Form owner/reservations/new --------------------------------------------------
+
+.form-group.string.optional.reservation_title label {
+  font-weight: lighter;
+}
+
+.form-group.string.optional.reservation_title input {
+  font-weight: lighter;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-group.text.optional.reservation_info label {
+  font-weight: lighter;
+}
+
+.form-group.text.optional.reservation_info textarea {
+  font-weight: lighter;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+  height: 120px;
+}

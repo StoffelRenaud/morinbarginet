@@ -1,1 +1,14 @@
-<%= @reservations %>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h2>Les Chênes</h2>
+  <% if @reservations.count == 0 %>
+    <div class="aucune-reservation-container">
+      <p>Aucune réservation pour le moment</p>
+      <%= link_to new_owner_reservation_path do %>
+        <i class="fas fa-plus-circle"></i>
+      <% end %>
+    </div>
+  <% else %>
+    <%= @reservations %>
+  <% end %>
+</div>

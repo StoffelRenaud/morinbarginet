@@ -1,0 +1,12 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h2>Créer une réservation</h2>
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8">
+      <%= simple_form_for(@reservation) do |f| %>
+        <%= f.input :title, placeholder: 'Titre' %>
+        <%= f.input :info, placeholder: 'Petit message sympathique ou non...' %>
+      <% end %>
+    </div>
+  </div>
+</div>
