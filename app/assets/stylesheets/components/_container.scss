@@ -1,4 +1,4 @@
-//HomePage Container
+//HomePage Container------------------------------------------------------------
 .home-page-main-container {
   display: flex;
 }
@@ -21,4 +21,12 @@
       transition: 0.5s;
     }
   }
+}
+
+//Devise footer container ------------------------------------------------------
+.devise-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
 }

@@ -1,0 +1,11 @@
+.devise-link a {
+  color: $blue;
+  transition: 0.5s;
+  margin: 10px;
+  font-weight: lighter;
+  &:hover {
+    color: $green;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+}

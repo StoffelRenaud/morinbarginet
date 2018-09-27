@@ -1,0 +1,64 @@
+//Form Devise sessions new -----------------------------------------------------
+.form-inputs {
+  font-weight: lighter;
+}
+
+.form-group.email.optional.user_email label {
+  font-weight: lighter;
+}
+
+.form-group.email.optional.user_email input {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-group.password.optional.user_password label {
+  font-weight: lighter;
+}
+
+.form-group.password.optional.user_password input {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-check input {
+  margin-right: 10px;
+}
+
+.form-check label {
+  font-weight:lighter;
+}
+
+//Form Devise registration new -------------------------------------------------
+
+.form-group.email.required.user_email label {
+  font-weight: lighter;
+}
+
+.form-group.email.required.user_email input {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-group.password.required.user_password label {
+  font-weight: lighter;
+}
+
+.form-group.password.required.user_password input {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-group.password.required.user_password_confirmation label {
+  font-weight: lighter;
+}
+
+.form-group.password.required.user_password_confirmation input {
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}

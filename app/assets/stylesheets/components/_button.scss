@@ -1,0 +1,8 @@
+.btn {
+  background-color: $green;
+  transition: 0.5s;
+  &:hover {
+    background-color: $orange;
+    transition: 0.5s;
+  }
+}
