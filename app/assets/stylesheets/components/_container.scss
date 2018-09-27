@@ -1,0 +1,24 @@
+//HomePage Container
+.home-page-main-container {
+  display: flex;
+}
+
+.home-page-container {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  background-size: cover !important;
+  a {
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+    &:hover {
+      text-decoration: none;
+      color: $yellow;
+      transition: 0.5s;
+    }
+  }
+}
