@@ -87,3 +87,65 @@
   border-top: 1px solid $blue;
   height: 120px;
 }
+
+.d-flex.flex-row.justify-content-between.align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-group.date.optional.reservation_start_date label {
+  font-weight: lighter;
+}
+
+#reservation_start_date_3i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+#reservation_start_date_2i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+#reservation_start_date_1i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+.form-group.date.optional.reservation_end_date label {
+  font-weight: lighter;
+}
+
+#reservation_end_date_3i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+#reservation_end_date_2i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
+
+#reservation_end_date_1i {
+  font-weight: lighter;
+  background-color: white;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid $blue;
+}
