@@ -5,6 +5,7 @@ class AnswersController < ApplicationController
 
   def new
     @answer = Answer.new
+    @nbr_answer = @answers.count
   end
 
   def create

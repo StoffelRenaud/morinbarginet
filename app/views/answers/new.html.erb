@@ -15,18 +15,15 @@
     <div class="answer-right-container">
       <div class="row">
         <div class="col-xs-12">
-          <% if @answers.count == 0 %>
-            <h5>Aucune réponse pour le moment</h5>
-          <% else %>
-            <% @answers.each do |answer| %>
-              <div class="answer-main-card">
-                <div class="answer-header-card">
-                  <h5><%= answer.owner.email %></h5>
-                  <i class="far fa-smile"></i>
-                </div>
-                <p><%= answer.content %></p>
+          <h5><%= pluralize(@nbr_answer, 'réponse pour le moment', 'réponses') %></h5>
+          <% @answers.each do |answer| %>
+            <div class="answer-main-card">
+              <div class="answer-header-card">
+                <h5><%= answer.owner.email %></h5>
+                <i class="far fa-smile"></i>
               </div>
-            <% end %>
+              <p><%= answer.content %></p>
+            </div>
           <% end %>
         </div>
       </div>
