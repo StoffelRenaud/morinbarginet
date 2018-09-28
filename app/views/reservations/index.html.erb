@@ -31,9 +31,13 @@
                 </div>
               </div>
             <% else %>
-              <%= link_to new_reservation_answer_path(reservation) do %>
-                <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
-              <% end %>
+              <div class="reservation-header-card">
+                <div class="reservation-header-title-card">
+                  <%= link_to new_reservation_answer_path(reservation) do %>
+                    <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                  <% end %>
+                </div>
+              </div>
             <% end %>
             <h5><%= reservation.title %></h5>
             <p><%= reservation.info %></p>
