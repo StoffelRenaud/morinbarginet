@@ -1,0 +1,28 @@
+//Card Reservation Index -------------------------------------------------------
+.reservation-main-card {
+  display: flex;
+  border-bottom: 1px solid $orange;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.reservation-header-card {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reservtion-header-title-card {
+  flex: 0 0 90%;
+}
+
+.reservation-header-gly-card {
+  flex: 0 0 10%;
+  i {
+    transition: 0.5s;
+    &:hover {
+      color: $orange;
+      transition: 0.5s;
+    }
+  }
+}

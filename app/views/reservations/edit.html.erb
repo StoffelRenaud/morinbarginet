@@ -1,0 +1,19 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h2>Modifier une réservation</h2>
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8">
+      <%= simple_form_for(@reservation) do |f| %>
+        <%= f.input :title, autofocus: true %>
+        <%= f.input :info %>
+        <div class="date-input" style="margin-bottom: 10px" >
+          <input type="text" name="reservation[start_date]" class="form-control form-input text-input datepicker" data-provide='datepicker' placeholder="Start">
+        </div>
+        <div class="date-input" style="margin-bottom: 10px">
+          <input class="form-control form-input text-input datepicker" data-provide='datepicker' name='reservation[end_date]' placeholder="End">
+        </div>
+        <%= f.button :submit, method: :patch %>
+      <% end %>
+    </div>
+  </div>
+</div>

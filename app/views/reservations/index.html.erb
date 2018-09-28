@@ -1,14 +1,41 @@
 <%= render 'shared/navbar' %>
 <div class="container">
-  <h2>Les Chênes</h2>
+  <h2>
+    Les Chênes | Réservations | <%= link_to new_reservation_path do %>
+        <i class="fas fa-plus-circle" style="font-size: 0.8em";></i>
+      <% end %>
+  </h2>
   <% if @reservations.count == 0 %>
     <div class="aucune-reservation-container">
       <p>Aucune réservation pour le moment</p>
-      <%= link_to new_owner_reservation_path do %>
-        <i class="fas fa-plus-circle"></i>
-      <% end %>
     </div>
   <% else %>
-    <%= @reservations %>
+    <div class="row">
+      <div class="col-sm-12 col-lg-offset-1 col-lg-9">
+        <% @reservations.each do |reservation| %>
+          <div class="reservation-main-card">
+            <% if reservation.owner == current_user %>
+              <div class="reservation-header-card">
+                <div class="reservation-header-title-card">
+                  <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date} au #{reservation.end_date}" %></h4>
+                </div>
+                <div class="reservation-header-gly-card">
+                  <%= link_to edit_reservation_path(reservation) do %>
+                    <i class="far fa-edit"></i>
+                  <% end %>
+                  <%= link_to reservation_path(reservation), method: :delete do %>
+                    <i class="far fa-trash-alt"></i>
+                  <% end %>
+                </div>
+              </div>
+            <% else %>
+              <%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date} au #{reservation.end_date}" %></h4>
+            <% end %>
+            <h5><%= reservation.title %></h5>
+            <p><%= reservation.info %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>
