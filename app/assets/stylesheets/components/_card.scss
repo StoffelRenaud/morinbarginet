@@ -12,8 +12,18 @@
   align-items: center;
 }
 
-.reservtion-header-title-card {
+.reservation-header-title-card {
   flex: 0 0 90%;
+  a {
+    text-decoration: none;
+  }
+  h4 {
+    transition: 0.5s;
+    &:hover {
+      color: $green;
+      transition: 0.5s;
+    }
+  }
 }
 
 .reservation-header-gly-card {
@@ -25,4 +35,16 @@
       transition: 0.5s;
     }
   }
+}
+
+//Card Answer New --------------------------------------------------------------
+.answer-main-card {
+  border-bottom: 1px solid $green;
+  padding: 20px;
+}
+
+.answer-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -3,7 +3,7 @@ class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:edit, :update, :destroy]
 
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.all.order(id: :desc)
   end
 
   def new

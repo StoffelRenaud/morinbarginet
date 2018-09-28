@@ -17,7 +17,9 @@
             <% if reservation.owner == current_user %>
               <div class="reservation-header-card">
                 <div class="reservation-header-title-card">
-                  <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                  <%= link_to new_reservation_answer_path(reservation) do %>
+                    <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                  <% end %>
                 </div>
                 <div class="reservation-header-gly-card">
                   <%= link_to edit_reservation_path(reservation) do %>
@@ -29,7 +31,9 @@
                 </div>
               </div>
             <% else %>
-              <%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date} au #{reservation.end_date}" %></h4>
+              <%= link_to new_reservation_answer_path(reservation) do %>
+                <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+              <% end %>
             <% end %>
             <h5><%= reservation.title %></h5>
             <p><%= reservation.info %></p>

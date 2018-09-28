@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :reservations
+  resources :reservations do
+    resources :answers, only: [:new, :create]
+  end
 
 end

@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :reservations, foreign_key: :owner_id, dependent: :destroy
   has_many :topics, foreign_key: :owner_id, dependent: :destroy
+  has_many :answers, through: :reservations, foreign_key: :owner_id, dependent: :destroy
 
   enumerize :parent, in: ['Claire', 'Pierre', 'Joie', 'Vivette', 'Tzou', 'Dadou', 'Jacques', 'Minouche']
 end
