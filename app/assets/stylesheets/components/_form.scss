@@ -10,7 +10,7 @@
 .form-group.email.optional.user_email input {
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 .form-group.password.optional.user_password label {
@@ -20,7 +20,7 @@
 .form-group.password.optional.user_password input {
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 .form-check input {
@@ -40,7 +40,7 @@
 .form-group.email.required.user_email input {
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 .form-group.password.required.user_password label {
@@ -50,7 +50,7 @@
 .form-group.password.required.user_password input {
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 .form-group.password.required.user_password_confirmation label {
@@ -60,7 +60,7 @@
 .form-group.password.required.user_password_confirmation input {
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 //Form reservations/new --------------------------------------------------
@@ -73,7 +73,7 @@
   font-weight: lighter;
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
 }
 
 .form-group.text.optional.reservation_info label {
@@ -84,7 +84,7 @@
   font-weight: lighter;
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
   height: 120px;
 }
 
@@ -160,6 +160,6 @@
   font-weight: lighter;
   border: none;
   box-shadow: none;
-  border-top: 1px solid $blue;
+  border: 1px solid $orange;
   height: 300px;
 }

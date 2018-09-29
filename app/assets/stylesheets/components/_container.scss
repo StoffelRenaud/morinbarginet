@@ -58,6 +58,32 @@
   position: sticky !important;
 }
 
+.answer-left-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.answer-left-header-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.answer-left-header-gly-container {
+  display: flex;
+  a {
+    transition: 0.5s;
+    &:hover {
+      transition: 0.5s;
+      text-decoration: none;
+      color: $strong-green;
+    }
+  }
+}
+
 .answer-right-container {
   flex: 0 0 50%;
   height: calc(100vh - 70px);

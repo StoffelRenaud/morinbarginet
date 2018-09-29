@@ -14,33 +14,11 @@
       <div class="col-sm-12 col-lg-offset-1 col-lg-9">
         <% @reservations.each do |reservation| %>
           <div class="reservation-main-card">
-            <% if reservation.owner == current_user %>
-              <div class="reservation-header-card">
-                <div class="reservation-header-title-card">
-                  <%= link_to new_reservation_answer_path(reservation) do %>
-                    <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
-                  <% end %>
-                </div>
-                <div class="reservation-header-gly-card">
-                  <%= link_to edit_reservation_path(reservation) do %>
-                    <i class="far fa-edit"></i>
-                  <% end %>
-                  <%= link_to reservation_path(reservation), method: :delete do %>
-                    <i class="far fa-trash-alt"></i>
-                  <% end %>
-                </div>
-              </div>
-            <% else %>
-              <div class="reservation-header-card">
-                <div class="reservation-header-title-card">
-                  <%= link_to new_reservation_answer_path(reservation) do %>
-                    <h4><%= "Demande de #{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
-                  <% end %>
-                </div>
-              </div>
+            <%= link_to new_reservation_answer_path(reservation) do %>
+              <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+              <h5><%= reservation.title %></h5>
+              <p><%= reservation.info %></p>
             <% end %>
-            <h5><%= reservation.title %></h5>
-            <p><%= reservation.info %></p>
           </div>
         <% end %>
       </div>

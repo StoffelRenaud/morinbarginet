@@ -4,36 +4,17 @@
   border-bottom: 1px solid $orange;
   padding: 20px;
   flex-direction: column;
-}
-
-.reservation-header-card {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.reservation-header-title-card {
-  flex: 0 0 90%;
+  transition: 0.5s;
+  &:hover {
+    margin-left: -10px;
+    transition: 0.5s;
+  }
   a {
-    text-decoration: none;
-  }
-  h4 {
     transition: 0.5s;
     &:hover {
-      margin-left: -10px;
+      text-decoration: none;
+      transition: 0.5s;
       color: $strong-green;
-      transition: 0.5s;
-    }
-  }
-}
-
-.reservation-header-gly-card {
-  flex: 0 0 10%;
-  i {
-    transition: 0.5s;
-    &:hover {
-      color: $orange;
-      transition: 0.5s;
     }
   }
 }
@@ -46,6 +27,8 @@
 
 .answer-header-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  i {
+    margin-right: 10px;
+  }
 }
