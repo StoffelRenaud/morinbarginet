@@ -17,6 +17,11 @@
           <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
+          <%= f.input :name, label: 'Prénom' %>
+          <%= f.input :parent, label:'Totem' %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :telephone %>
         </div>
         <div class="devise-footer-container">
           <div class="form-actions">

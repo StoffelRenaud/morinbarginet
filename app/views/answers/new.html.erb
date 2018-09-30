@@ -5,8 +5,16 @@
 
       <div class="answer-left-header-container">
         <div class="answer-left-header-title-container">
-          <i class="far fa-smile"></i>
-          <h4><%= "#{@reservation.owner.email}" %></h4>
+          <% if @reservation.owner.photo.present? %>
+            <%= cl_image_tag(current_user.photo, class:'my-avatar') %>
+          <% else %>
+            <i class="far fa-smile" style="font-size: 1.2em";></i>
+          <% end %>
+          <% if @reservation.owner.name %>
+            <h4><%= "#{@reservation.owner.name.capitalize}" %></h4>
+          <% else %>
+            <h4><%= "#{@reservation.owner.email}" %></h4>
+          <% end %>
         </div>
 
         <% if @reservation.owner == current_user %>
@@ -37,7 +45,11 @@
           <% @answers.each do |answer| %>
             <div class="answer-main-card">
               <div class="answer-header-card">
-                <i class="far fa-smile"></i>
+                <% if answer.owner.photo.present? %>
+                  <%= cl_image_tag(answer.owner.photo, class:'my-avatar-small') %>
+                <% else %>
+                  <i class="far fa-smile"></i>
+                <% end %>
                 <h5><%= answer.owner.email %></h5>
               </div>
               <p><%= answer.content %></p>

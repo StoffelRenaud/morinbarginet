@@ -8,7 +8,6 @@
 }
 
 .form-group.email.optional.user_email input {
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -18,7 +17,6 @@
 }
 
 .form-group.password.optional.user_password input {
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -38,7 +36,6 @@
 }
 
 .form-group.email.required.user_email input {
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -48,7 +45,6 @@
 }
 
 .form-group.password.required.user_password input {
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -58,11 +54,46 @@
 }
 
 .form-group.password.required.user_password_confirmation input {
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
 
+.form-group.string.optional.user_name label {
+  font-weight: lighter;
+}
+
+.form-group.string.optional.user_name input {
+  box-shadow: none;
+  border: 1px solid $orange;
+}
+
+.form-group.select.optional.user_parent label {
+  font-weight: lighter;
+}
+
+.form-control.select.optional {
+  box-shadow: none;
+  border: 1px solid $orange;
+}
+
+.form-group.file.optional.user_photo label {
+  font-weight: lighter;
+}
+
+.form-group.file.optional.user_photo input {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group.tel.optional.user_telephone label {
+  font-weight: lighter;
+}
+
+.form-group.tel.optional.user_telephone input {
+  box-shadow: none;
+  border: 1px solid $orange;
+}
 //Form reservations/new --------------------------------------------------
 
 .form-group.string.optional.reservation_title label {
@@ -71,7 +102,6 @@
 
 .form-group.string.optional.reservation_title input {
   font-weight: lighter;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -82,7 +112,6 @@
 
 .form-group.text.optional.reservation_info textarea {
   font-weight: lighter;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
   height: 120px;
@@ -101,7 +130,6 @@
 #reservation_start_date_3i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -109,7 +137,6 @@
 #reservation_start_date_2i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -117,7 +144,6 @@
 #reservation_start_date_1i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -129,7 +155,6 @@
 #reservation_end_date_3i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -137,7 +162,6 @@
 #reservation_end_date_2i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -145,7 +169,6 @@
 #reservation_end_date_1i {
   font-weight: lighter;
   background-color: white;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
 }
@@ -158,7 +181,6 @@
 
 .form-group.text.optional.answer_content textarea {
   font-weight: lighter;
-  border: none;
   box-shadow: none;
   border: 1px solid $orange;
   height: 300px;

@@ -11,4 +11,6 @@ class User < ApplicationRecord
   has_many :answers, through: :reservations, foreign_key: :owner_id, dependent: :destroy
 
   enumerize :parent, in: ['Claire', 'Pierre', 'Joie', 'Vivette', 'Tzou', 'Dadou', 'Jacques', 'Minouche']
+
+  mount_uploader :photo, PhotoUploader
 end

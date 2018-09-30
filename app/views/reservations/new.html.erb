@@ -6,18 +6,18 @@
       <%= simple_form_for(@reservation) do |f| %>
         <%= f.input :title, label: 'Titre', placeholder: 'Titre', autofocus: true %>
         <%= f.input :info, placeholder: 'Petit message sympathique ou non...' %>
-        <%= f.input :start_date, label: 'Du', as: :date, start_year: Date.today.year,
+        <%= f.input :start_date, id:'datepicker', label: 'Du', as: :date, start_year: Date.today.year,
                               end_year: Date.today.year + 30,
                               order: [:day, :month, :year] %>
         <%= f.input :end_date, label: 'Au', as: :date, start_year: Date.today.year,
                               end_year: Date.today.year + 30,
                               order: [:day, :month, :year] %>
 
-         <div class="date-input" style="margin-bottom: 10px" >
-            <input type="text" name="booking[start_date]" class="form-control form-input text-input datepicker" data-provide='datepicker' placeholder="Start">
-        </div>
+        <!-- <p><input type="text" class="datepicker" name=reservation[start_date] placeholder='Du'></p>
+        <p><input type="text" class="datepicker" name=reservation[end_date] placeholder='Du'></p> -->
         <%= f.button :submit %>
       <% end %>
+
     </div>
   </div>
 </div>
