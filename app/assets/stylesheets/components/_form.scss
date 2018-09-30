@@ -123,7 +123,11 @@
   justify-content: space-around;
 }
 
-.form-group.date.optional.reservation_start_date label {
+.form-group.date.required.reservation_start_date label {
+  font-weight: lighter;
+}
+
+.form-group.date.required.reservation_start_date.form-group-valid label {
   font-weight: lighter;
 }
 
@@ -148,7 +152,11 @@
   border: 1px solid $orange;
 }
 
-.form-group.date.optional.reservation_end_date label {
+.form-group.date.required.reservation_end_date.form-group-valid label {
+  font-weight: lighter;
+}
+
+.form-group.date.required.reservation_end_date label {
   font-weight: lighter;
 }
 

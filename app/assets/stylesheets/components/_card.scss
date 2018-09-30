@@ -6,7 +6,7 @@
   flex-direction: column;
   transition: 0.5s;
   &:hover {
-    margin-left: -5px;
+    margin-left: -10px;
     transition: 0.5s;
   }
   a {
@@ -28,7 +28,7 @@
 .answer-header-card {
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   h5 {
     margin-left: 10px;
   }

@@ -22,7 +22,7 @@
             <%= link_to edit_reservation_path(@reservation) do %>
               <i class="far fa-edit"></i>
             <% end %>
-            <%= link_to reservation_path(@reservation), method: :delete, data: {confirm: "Certain(e) ?"} do %>
+            <%= link_to reservation_path(@reservation), method: :delete, data: {confirm: "Certain(e) de supprimer ce sujet ?"} do %>
               <i class="far fa-trash-alt"></i>
             <% end %>
           </div>
@@ -31,11 +31,10 @@
       </div>
 
       <h4><%= "Du #{@reservation.start_date.strftime('%d/%m/%y')} au #{@reservation.end_date.strftime('%d/%m/%y')}"%></h4>
-      <h5><%= @reservation.title %></h5>
       <p style="margin-bottom: 50px";><%= @reservation.info %></p>
       <%= simple_form_for([@reservation, @answer]) do |f| %>
         <%= f.input :content, label: 'Répondre', autofocus: true %>
-        <%= f.button :submit %>
+        <%= f.button :submit, 'OK' %>
       <% end %>
     </div>
     <div class="answer-right-container">
