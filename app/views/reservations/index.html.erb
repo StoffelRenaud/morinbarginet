@@ -15,7 +15,11 @@
         <% @reservations.each do |reservation| %>
           <div class="reservation-main-card">
             <%= link_to new_reservation_answer_path(reservation) do %>
-              <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+              <% if reservation.owner.name.present? %>
+                <h4><%= "#{reservation.owner.name.capitalize} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+              <% else %>
+                <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+              <% end %>
               <h5><%= reservation.title %></h5>
               <p><%= reservation.info %></p>
             <% end %>

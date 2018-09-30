@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 //Reservation index ------------------------------------------------------------
@@ -76,6 +77,8 @@
   display: flex;
   a {
     transition: 0.5s;
+    margin-left: 5px;
+    margin-right: 5px;
     &:hover {
       transition: 0.5s;
       text-decoration: none;

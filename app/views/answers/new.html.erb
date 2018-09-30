@@ -50,7 +50,11 @@
                 <% else %>
                   <i class="far fa-smile"></i>
                 <% end %>
-                <h5><%= answer.owner.email %></h5>
+                <% if answer.owner.name.present? %>
+                  <h5><%= answer.owner.name.capitalize %></h5>
+                <% else %>
+                  <h5><%= answer.owner.email %></h5>
+                <% end %>
               </div>
               <p><%= answer.content %></p>
             </div>
