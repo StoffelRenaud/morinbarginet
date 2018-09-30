@@ -93,7 +93,8 @@
   flex: 0 0 50%;
   height: calc(100vh - 70px);
   overflow: scroll;
-  padding-left: 30px;
+  margin-left: 30px;
+  overflow-wrap: break-word;
 }
 
 

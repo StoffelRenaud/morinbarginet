@@ -30,11 +30,11 @@
 
       </div>
 
-      <h4><%= "Du #{@reservation.start_date.strftime('%d/%m/%y')} au #{@reservation.end_date.strftime('%d/%m/%y')}"%></h4>
+      <h5><%= "Du #{@reservation.start_date.strftime('%d/%m/%y')} au #{@reservation.end_date.strftime('%d/%m/%y')}"%></h5>
       <p style="margin-bottom: 50px";><%= @reservation.info %></p>
       <%= simple_form_for([@reservation, @answer]) do |f| %>
         <%= f.input :content, label: 'Répondre', autofocus: true %>
-        <%= f.button :submit, 'OK' %>
+        <%= f.button :submit, 'Ok' %>
       <% end %>
     </div>
     <div class="answer-right-container">

@@ -81,18 +81,9 @@
 }
 
 .form-group.file.optional.user_photo input {
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   align-items: center;
-}
-
-.form-group.tel.optional.user_telephone label {
-  font-weight: lighter;
-}
-
-.form-group.tel.optional.user_telephone input {
-  box-shadow: none;
-  border: 1px solid $orange;
 }
 //Form reservations/new --------------------------------------------------
 
