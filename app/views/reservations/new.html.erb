@@ -12,6 +12,10 @@
         <%= f.input :end_date, label: 'Au', as: :date, start_year: Date.today.year,
                               end_year: Date.today.year + 30,
                               order: [:day, :month, :year] %>
+
+         <div class="date-input" style="margin-bottom: 10px" >
+            <input type="text" name="booking[start_date]" class="form-control form-input text-input datepicker" data-provide='datepicker' placeholder="Start">
+        </div>
         <%= f.button :submit %>
       <% end %>
     </div>
