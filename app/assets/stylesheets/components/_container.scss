@@ -1,25 +1,25 @@
 //HomePage Container------------------------------------------------------------
 .home-page-main-container {
   display: flex;
+  background-image: linear-gradient(-225deg, rgba(0,56,56,0.4) 0%, rgba(0,36,61,0.4) 50%), url("Ville.png");
+  background-size: cover !important;
+  height: 100vh;
 }
 
 .home-page-container {
+  flex: 0 0 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  background-size: cover !important;
-  a {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
+  transition: 0.5s;
+  &:hover {
+    margin-top: -10px;
+    text-decoration: none;
+    color: $orange;
     transition: 0.5s;
-    &:hover {
-      text-decoration: none;
-      color: $orange;
-      transition: 0.5s;
-    }
   }
 }
 
