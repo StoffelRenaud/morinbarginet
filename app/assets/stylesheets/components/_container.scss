@@ -16,7 +16,7 @@
   text-align: center;
   transition: 0.5s;
   &:hover {
-    margin-top: -15px;
+    margin-top: -20px;
     text-decoration: none;
     color: $blue;
     transition: 0.5s;
@@ -59,6 +59,7 @@
   display: flex;
   flex-direction: column;
   position: sticky !important;
+  margin-bottom: 50px;
 }
 
 .answer-left-header-container {

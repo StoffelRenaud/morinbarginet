@@ -87,16 +87,6 @@
 }
 //Form reservations/new --------------------------------------------------
 
-.form-group.string.optional.reservation_title label {
-  font-weight: lighter;
-}
-
-.form-group.string.optional.reservation_title input {
-  font-weight: lighter;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
 .form-group.text.optional.reservation_info label {
   font-weight: lighter;
 }
@@ -105,7 +95,8 @@
   font-weight: lighter;
   box-shadow: none;
   border: 1px solid $orange;
-  height: 120px;
+  height: 300px;
+  font-size: 16px;
 }
 
 .d-flex.flex-row.justify-content-between.align-items-center {
@@ -183,4 +174,5 @@
   box-shadow: none;
   border: 1px solid $orange;
   height: 300px;
+  font-size: 16px;
 }

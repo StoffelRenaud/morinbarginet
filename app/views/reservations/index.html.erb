@@ -20,7 +20,7 @@
               <% else %>
                 <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
               <% end %>
-              <p><%= reservation.info %></p>
+              <p><%= truncate(reservation.info, length: 300)  %></p>
             <% end %>
           </div>
         <% end %>
