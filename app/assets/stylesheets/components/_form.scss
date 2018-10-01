@@ -176,3 +176,27 @@
   height: 300px;
   font-size: 16px;
 }
+
+//Form Topic new ---------------------------------------------------------------
+.form-group.string.required.topic_title label {
+  font-weight: lighter;
+}
+
+.form-group.string.required.topic_title input {
+  font-weight: lighter;
+  box-shadow: none;
+  border: 1px solid $orange;
+  font-size: 16px;
+}
+
+.form-group.text.required.topic_info label {
+  font-weight: lighter;
+}
+
+.form-group.text.required.topic_info textarea {
+  font-weight: lighter;
+  box-shadow: none;
+  border: 1px solid $orange;
+  font-size: 16px;
+  height: 300px;
+}

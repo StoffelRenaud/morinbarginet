@@ -6,4 +6,7 @@ Rails.application.routes.draw do
     resources :answers, only: [:new, :create]
   end
 
+  resources :topics do
+    resources :posts
+  end
 end

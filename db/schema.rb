@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_140441) do
+ActiveRecord::Schema.define(version: 2018_10_01_162756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,9 @@ ActiveRecord::Schema.define(version: 2018_09_30_140441) do
     t.integer "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "topic_id"
     t.index ["photo_id"], name: "index_posts_on_photo_id"
+    t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_09_30_140441) do
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "info"
     t.index ["owner_id"], name: "index_topics_on_owner_id"
     t.index ["post_id"], name: "index_topics_on_post_id"
   end
@@ -80,6 +83,7 @@ ActiveRecord::Schema.define(version: 2018_09_30_140441) do
   add_foreign_key "answers", "reservations"
   add_foreign_key "answers", "users", column: "owner_id"
   add_foreign_key "posts", "photos"
+  add_foreign_key "posts", "topics"
   add_foreign_key "reservations", "answers"
   add_foreign_key "reservations", "users", column: "owner_id"
   add_foreign_key "topics", "posts"

@@ -1,0 +1,30 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="post-new-main-container">
+    <div class="post-new-left-container">
+      <div class="post-new-header-container">
+        <div class="post-new-left-header-container">
+          <% if @topic.owner.photo.present? %>
+            <%= cl_image_tag(@topic.owner.photo, class:'my-avatar-small') %>
+          <% else %>
+            <i class="far fa-smile" style="font-size: 1.2em";></i>
+          <% end %>
+          <h4><%= @topic.title %></h4>
+        </div>
+        <div class="post-new-right-header-container">
+          <% if @topic.owner == current_user %>
+            <%= link_to edit_topic_path(@topic) do %>
+              <i class="far fa-edit"></i>
+            <% end %>
+            <%= link_to topic_path(@topic), method: :delete, data: {confirm: 'Certain(e) de vouloir supprimer cette discussion ?'} do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <p><%= @topic.info %></p>
+    </div>
+    <div class="post-new-right-container">
+    </div>
+  </div>
+</div>

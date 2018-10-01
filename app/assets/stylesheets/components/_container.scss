@@ -99,3 +99,59 @@
 }
 
 
+//Topic index ------------------------------------------------------------------
+.aucun-reservation-container {
+  display: flex;
+  i {
+    margin-left: 10px;
+    transition: 0.5s;
+    font-weight: lighter;
+    margin-bottom: 0px;
+    &:hover {
+      color: $orange;
+      transition: 0.5s;
+    }
+  }
+}
+
+//Post New ---------------------------------------------------------------------
+.post-new-main-container {
+  display:flex;
+}
+
+.post-new-left-container {
+  flex: 0 0 50%;
+}
+
+.post-new-right-container {
+  flex: 0 0 50%;
+}
+
+.post-new-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-new-left-header-container {
+  display: flex;
+  align-items: center;
+  h4 {
+    margin-left: 10px;
+  }
+}
+
+.post-new-right-header-container {
+  display: flex;
+  align-items: center;
+  a {
+    transition: 0.5s;
+    margin-left: 5px;
+    margin-right: 5px;
+    &:hover {
+      transition: 0.5s;
+      text-decoration: none;
+      color: $strong-green;
+    }
+  }
+}

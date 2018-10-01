@@ -1,0 +1,42 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+  <h2>
+    La Famille | Discussions | <%= link_to new_topic_path do %>
+      <i class="fas fa-plus-circle" style="font-size: 0.7em";></i>
+    <% end %>
+  </h2>
+  <% if @topics.count == 0 %>
+    <div class="aucun-topic-container">
+      <p>Aucune discussion pour le moment</p>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="col-sm-12 col-lg-offset-1 col-lg-9">
+        <% @topics.each do |topic| %>
+          <div class="topic-main-card">
+            <%= link_to new_topic_post_path(topic) do %>
+              <div class="topic-card-header">
+                <div class="topic-card-header-left">
+                  <% if topic.owner.photo.present? %>
+                    <%= cl_image_tag(topic.owner.photo, class:'my-avatar-small') %>
+                  <% else %>
+                    <i class="far fa-smile"></i>
+                  <% end %>
+                  <% if topic.owner.name.present? %>
+                    <h5><%= "#{topic.owner.name.capitalize} | #{truncate(topic.title, length: 40)}" %></h5>
+                  <% else %>
+                    <h5><%= "#{topic.owner.email} | #{truncate(topic.title, length: 40)}" %></h5>
+                  <% end %>
+                </div>
+                <div class="topic-card-header-right">
+                  <span><%= "Créée le #{topic.created_at.strftime("%d/%m/%y")}" %></span>
+                </div>
+              </div>
+              <p><%= truncate(topic.info, length: 300) %></p>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

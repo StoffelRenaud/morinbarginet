@@ -15,12 +15,19 @@
         <% @reservations.each do |reservation| %>
           <div class="reservation-main-card">
             <%= link_to new_reservation_answer_path(reservation) do %>
-              <% if reservation.owner.name.present? %>
-                <h4><%= "#{reservation.owner.name.capitalize} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
-              <% else %>
-                <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
-              <% end %>
-              <p><%= truncate(reservation.info, length: 300)  %></p>
+              <div class="reservation-main-card-header">
+                <% if reservation.owner.photo.present? %>
+                  <%= cl_image_tag(reservation.owner.photo, class:'my-avatar-small') %>
+                <% else %>
+                  <i class="far fa-smile" style="font-size: 1.2em";></i>
+                <% end %>
+                <% if reservation.owner.name.present? %>
+                  <h4><%= "#{reservation.owner.name.capitalize} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                <% else %>
+                  <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                <% end %>
+              </div>
+              <p><%= truncate(reservation.info, length: 300) %></p>
             <% end %>
           </div>
         <% end %>
