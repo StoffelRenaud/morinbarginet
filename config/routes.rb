@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :topics do
-    resources :posts
+    resources :posts, only: [:new, :create]
   end
 end

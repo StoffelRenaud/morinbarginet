@@ -22,7 +22,7 @@
 .reservation-main-card-header {
   display: flex;
   align-items: center;
-  h4 {
+  h5 {
     margin-left: 10px;
   }
 }
@@ -82,4 +82,12 @@
     font-weight: lighter;
     font-size: 13px;
   }
+}
+
+//Card Post New ----------------------------------------------------------------
+.post-new-main-card {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid $orange;
 }

@@ -22,9 +22,9 @@
                   <i class="far fa-smile" style="font-size: 1.2em";></i>
                 <% end %>
                 <% if reservation.owner.name.present? %>
-                  <h4><%= "#{reservation.owner.name.capitalize} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                  <h5><%= "#{reservation.owner.name.capitalize} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h5>
                 <% else %>
-                  <h4><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h4>
+                  <h5><%= "#{reservation.owner.email} | Du #{reservation.start_date.strftime("%d/%m/%y")} au #{reservation.end_date.strftime("%d/%m/%y")}" %></h5>
                 <% end %>
               </div>
               <p><%= truncate(reservation.info, length: 300) %></p>

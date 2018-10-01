@@ -200,3 +200,18 @@
   font-size: 16px;
   height: 300px;
 }
+
+//Form Post New ----------------------------------------------------------------
+.form-group.text.optional.post_content {
+  label {
+    font-weight: lighter;
+  }
+  textarea {
+    font-weight: lighter;
+    box-shadow: none;
+    border: 1px solid $orange;
+    font-size: 16px;
+    height: 300px;
+  }
+}
+

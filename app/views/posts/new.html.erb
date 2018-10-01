@@ -23,8 +23,27 @@
         </div>
       </div>
       <p><%= @topic.info %></p>
+      <div class="row">
+        <div class="col-xs-12">
+          <% if @posts.count == 0 %>
+            <div class="post-new-main-card">
+              <h5>Aucun réponse pour le moment</h5>
+            </div>
+          <% else %>
+            <% @posts.each do |post| %>
+              <div class="post-new-main-card">
+                <h5><%= post.content %></h5>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
     </div>
     <div class="post-new-right-container">
+      <%= simple_form_for([@topic, @post]) do |f| %>
+        <%= f.input :content, label: 'Ajouter un commentaire', autofocus: true, placeholder: 'Commentaire' %>
+        <%= f.button :submit, 'Ok' %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -52,6 +52,7 @@
 //Answer New -------------------------------------------------------------------
 .answer-main-container {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .answer-left-container {
@@ -59,7 +60,6 @@
   display: flex;
   flex-direction: column;
   position: sticky !important;
-  margin-bottom: 50px;
 }
 
 .answer-left-header-container {
@@ -125,12 +125,17 @@
 
 .post-new-right-container {
   flex: 0 0 50%;
+  margin-left: 30px;
+  height: calc(100vh - 70px);
+  position: sticky !important;
+  padding: 20px;
 }
 
 .post-new-header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .post-new-left-header-container {
