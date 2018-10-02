@@ -1,0 +1,2 @@
+class TopicPhoto < ApplicationRecord
+end

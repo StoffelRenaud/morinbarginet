@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_162756) do
+ActiveRecord::Schema.define(version: 2018_10_02_141315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,15 +29,15 @@ ActiveRecord::Schema.define(version: 2018_10_01_162756) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "post_id"
+    t.index ["post_id"], name: "index_photos_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
-    t.integer "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "topic_id"
-    t.index ["photo_id"], name: "index_posts_on_photo_id"
     t.index ["topic_id"], name: "index_posts_on_topic_id"
   end
 
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 2018_10_01_162756) do
     t.bigint "answer_id"
     t.index ["answer_id"], name: "index_reservations_on_answer_id"
     t.index ["owner_id"], name: "index_reservations_on_owner_id"
+  end
+
+  create_table "topic_photos", force: :cascade do |t|
+    t.string "url"
+    t.bigint "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_topic_photos_on_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -82,10 +90,11 @@ ActiveRecord::Schema.define(version: 2018_10_01_162756) do
 
   add_foreign_key "answers", "reservations"
   add_foreign_key "answers", "users", column: "owner_id"
-  add_foreign_key "posts", "photos"
+  add_foreign_key "photos", "posts"
   add_foreign_key "posts", "topics"
   add_foreign_key "reservations", "answers"
   add_foreign_key "reservations", "users", column: "owner_id"
+  add_foreign_key "topic_photos", "topics"
   add_foreign_key "topics", "posts"
   add_foreign_key "topics", "users", column: "owner_id"
 end
