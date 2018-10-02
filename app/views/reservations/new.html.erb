@@ -11,10 +11,7 @@
         <%= f.input :end_date, label: 'Au', as: :date, start_year: Date.today.year,
                               end_year: Date.today.year + 30,
                               order: [:day, :month, :year] %>
-
-        <!-- <p><input type="text" class="datepicker" name=reservation[start_date] placeholder='Du'></p>
-        <p><input type="text" class="datepicker" name=reservation[end_date] placeholder='Du'></p> -->
-        <%= f.button :submit %>
+        <%= f.button :submit, 'Ok' %>
       <% end %>
 
     </div>

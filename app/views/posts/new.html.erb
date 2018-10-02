@@ -51,6 +51,7 @@
     </div>
     <div class="post-new-right-container">
       <%= simple_form_for([@topic, @post]) do |f| %>
+        <%= f.error_notification %>
         <%= f.input :content, label: 'Ajouter un commentaire', autofocus: true, placeholder: 'Commentaire' %>
         <%= f.button :submit, 'Ok' %>
       <% end %>
