@@ -23,21 +23,31 @@
         </div>
       </div>
       <p><%= @topic.info %></p>
-      <div class="row">
-        <div class="col-xs-12">
-          <% if @posts.count == 0 %>
+      <p><%= pluralize(@posts.count,'réponse pour le moment','réponses') %></p>
+      <% if @posts.count == 0 %>
+        <div class="row">
+          <div class="col-xs-12">
             <div class="post-new-main-card">
               <h5>Aucun réponse pour le moment</h5>
             </div>
-          <% else %>
-            <% @posts.each do |post| %>
+          </div>
+        </div>
+      <% else %>
+        <div class="row">
+          <% @posts.each do |post| %>
+            <div class="col-xs-12">
               <div class="post-new-main-card">
-                <h5><%= post.content %></h5>
+                <% if post.topic.owner.photo.present? %>
+                  <%= cl_image_tag(post.topic.owner.photo, class:'my-avatar-small') %>
+                <% else %>
+                  <i class="far fa-smile" style="font-size: 1.2em";></i>
+                <% end %>
+                <p><%= truncate(post.content, length: 200) %></p>
               </div>
-            <% end %>
+            </div>
           <% end %>
         </div>
-      </div>
+      <% end %>
     </div>
     <div class="post-new-right-container">
       <%= simple_form_for([@topic, @post]) do |f| %>

@@ -121,6 +121,8 @@
 
 .post-new-left-container {
   flex: 0 0 50%;
+  height: calc(100vh - 70px);
+  overflow: scroll;
 }
 
 .post-new-right-container {
