@@ -105,65 +105,81 @@
   justify-content: space-around;
 }
 
-.form-group.date.required.reservation_start_date label {
-  font-weight: lighter;
+// .form-group.date.required.reservation_start_date label {
+//   font-weight: lighter;
+// }
+
+// .form-group.date.required.reservation_start_date.form-group-valid label {
+//   font-weight: lighter;
+// }
+
+// #reservation_start_date_3i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+// #reservation_start_date_2i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+// #reservation_start_date_1i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+// .form-group.date.required.reservation_end_date.form-group-valid label {
+//   font-weight: lighter;
+// }
+
+// .form-group.date.required.reservation_end_date label {
+//   font-weight: lighter;
+// }
+
+// #reservation_end_date_3i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+// #reservation_end_date_2i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+// #reservation_end_date_1i {
+//   font-weight: lighter;
+//   background-color: white;
+//   box-shadow: none;
+//   border: 1px solid $orange;
+// }
+
+.form-date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  input {
+    width: 49%;
+    font-size: 16px;
+  }
 }
 
-.form-group.date.required.reservation_start_date.form-group-valid label {
-  font-weight: lighter;
-}
-
-#reservation_start_date_3i {
+.datepicker.flatpickr-input {
   font-weight: lighter;
   background-color: white;
   box-shadow: none;
   border: 1px solid $orange;
 }
-
-#reservation_start_date_2i {
-  font-weight: lighter;
-  background-color: white;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
-#reservation_start_date_1i {
-  font-weight: lighter;
-  background-color: white;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
-.form-group.date.required.reservation_end_date.form-group-valid label {
-  font-weight: lighter;
-}
-
-.form-group.date.required.reservation_end_date label {
-  font-weight: lighter;
-}
-
-#reservation_end_date_3i {
-  font-weight: lighter;
-  background-color: white;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
-#reservation_end_date_2i {
-  font-weight: lighter;
-  background-color: white;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
-#reservation_end_date_1i {
-  font-weight: lighter;
-  background-color: white;
-  box-shadow: none;
-  border: 1px solid $orange;
-}
-
-
 //Form Answer New --------------------------------------------------------------
 .form-group.text.optional.answer_content label {
   font-weight: lighter;

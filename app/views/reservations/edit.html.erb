@@ -6,12 +6,10 @@
       <%= simple_form_for(@reservation) do |f| %>
         <%= f.error_notification %>
         <%= f.input :info, autofocus: true %>
-        <%= f.input :start_date, label: 'Du', as: :date, start_year: Date.today.year,
-                              end_year: Date.today.year + 30,
-                              order: [:day, :month, :year] %>
-        <%= f.input :end_date, label: 'Au', as: :date, start_year: Date.today.year,
-                              end_year: Date.today.year + 30,
-                              order: [:day, :month, :year] %>
+        <div class="form-date-container">
+          <input type="text" class='datepicker' name=reservation[start_date] value= "<%= @reservation.start_date %>">
+          <input type="text" class='datepicker' name=reservation[end_date] value= "<%= @reservation.end_date %>">
+        </div>
         <%= f.button :submit, 'Ok', method: :patch %>
       <% end %>
     </div>
