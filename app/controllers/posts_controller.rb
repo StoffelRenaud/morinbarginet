@@ -11,7 +11,10 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.topic = @topic
     if @post.save
-      redirect_to new_topic_post_path(@topic)
+      respond_to do |format|
+        format.html { redirect_to new_topic_post_path(@topic) }
+        format.js
+      end
     else
       render :new
     end
