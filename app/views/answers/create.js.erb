@@ -1,0 +1,7 @@
+const new_answer = $('<%= j render 'answers-cards', answer: @answer %>').hide();
+$('#answers').prepend(new_answer);
+new_answer.slideDown();
+$('#answer_content').val('');
+
+$('#answer_count').html('<%= j pluralize(@answers.count, 'réponse pour le moment', 'réponses') %>');
+

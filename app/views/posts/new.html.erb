@@ -50,7 +50,7 @@
       <% end %>
     </div>
     <div class="post-new-right-container">
-      <%= simple_form_for([@topic, @post], remote: true) do |form| %>
+      <%= simple_form_for([@topic, @post]) do |form| %>
         <%= form.error_notification %>
         <%= form.input :content, label: 'Ajouter un commentaire', autofocus: true, placeholder: 'Commentaire' %>
         <%= form.button :submit, 'Ok' %>

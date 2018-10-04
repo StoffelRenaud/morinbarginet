@@ -16,7 +16,6 @@
             <h4><%= "#{@reservation.owner.email}" %></h4>
           <% end %>
         </div>
-
         <% if @reservation.owner == current_user %>
           <div class="answer-left-header-gly-container">
             <%= link_to edit_reservation_path(@reservation) do %>
@@ -27,37 +26,24 @@
             <% end %>
           </div>
         <% end %>
-
       </div>
-
       <h5><%= "Du #{@reservation.start_date.strftime('%d/%m/%y')} au #{@reservation.end_date.strftime('%d/%m/%y')}"%></h5>
       <p style="margin-bottom: 50px";><%= @reservation.info %></p>
-      <%= simple_form_for([@reservation, @answer]) do |f| %>
-        <%= f.input :content, label: 'Répondre', autofocus: true %>
-        <%= f.button :submit, 'Ok' %>
+      <%= simple_form_for([@reservation, @answer], remote: true) do |form| %>
+        <%= form.input :content, id:'answer_content', label: 'Répondre', autofocus: true %>
+        <%= form.button :submit, 'Ok' %>
       <% end %>
     </div>
     <div class="answer-right-container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h5><%= pluralize(@nbr_answer, 'réponse pour le moment', 'réponses') %></h5>
-          <% @answers.each do |answer| %>
-            <div class="answer-main-card">
-              <div class="answer-header-card">
-                <% if answer.owner.photo.present? %>
-                  <%= cl_image_tag(answer.owner.photo, class:'my-avatar-small') %>
-                <% else %>
-                  <i class="far fa-smile"></i>
-                <% end %>
-                <% if answer.owner.name.present? %>
-                  <h5><%= answer.owner.name.capitalize %></h5>
-                <% else %>
-                  <h5><%= answer.owner.email %></h5>
-                <% end %>
+      <h5 id="answer_count"><%= pluralize(@answers.count, 'réponse pour le moment', 'réponses') %></h5>
+        <div id="answers">
+          <div class="row">
+            <% @answers.each do |answer| %>
+              <div class="col-xs-12">
+                <%= render 'answers/answers-cards', answer: answer %>
               </div>
-              <p><%= answer.content %></p>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

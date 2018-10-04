@@ -14,7 +14,7 @@
       <div class="col-sm-12 col-lg-offset-1 col-lg-9">
         <% @reservations.each do |reservation| %>
           <div class="reservation-main-card">
-            <%= link_to new_reservation_answer_path(reservation) do %>
+            <%= link_to reservation_path(reservation) do %>
               <div class="reservation-main-card-header">
                 <% if reservation.owner.photo.present? %>
                   <%= cl_image_tag(reservation.owner.photo, class:'my-avatar-small') %>

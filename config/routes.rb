@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :reservations do
-    resources :answers, only: [:new, :create]
+    resources :answers, only: [:create]
   end
 
   resources :topics do

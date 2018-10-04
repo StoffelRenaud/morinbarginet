@@ -1,9 +1,14 @@
 class ReservationsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_reservation, only: [:edit, :update, :destroy]
+  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
 
   def index
     @reservations = Reservation.all.order(id: :desc)
+  end
+
+  def show
+    @answers = @reservation.answers.order(id: :desc)
+    @answer = Answer.new
   end
 
   def new
