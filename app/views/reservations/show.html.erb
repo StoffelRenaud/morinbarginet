@@ -6,7 +6,7 @@
       <div class="answer-left-header-container">
         <div class="answer-left-header-title-container">
           <% if @reservation.owner.photo.present? %>
-            <%= cl_image_tag(current_user.photo, class:'my-avatar') %>
+            <%= cl_image_tag(@reservation.owner.photo, class:'my-avatar') %>
           <% else %>
             <i class="far fa-smile" style="font-size: 1.2em";></i>
           <% end %>

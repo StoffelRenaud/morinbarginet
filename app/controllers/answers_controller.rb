@@ -14,7 +14,10 @@ class AnswersController < ApplicationController
         format.js {}
       end
     else
-      render 'reservations/show'
+      respond_to do |format|
+        format.html { render 'reservations/show' }
+        format.js {}
+      end
     end
   end
 
